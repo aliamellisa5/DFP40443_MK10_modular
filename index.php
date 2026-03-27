@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "data_produk.php";
+include "data.php";
 
 $menu = $_GET['menu'] ?? 'utama';
 
@@ -8,13 +8,16 @@ include "header.php";
 
 switch ($menu) {
     case 'tempah':
-        include "pages_tempah.php";
+        include "tempah.php";
         break;
+
     case 'invois':
-        include "pages_invois.php";
+        include "invois.php";
         break;
+
     default:
-        include "pages_utama.php";
+        include "utama.php";
+        break;
 }
 
 include "footer.php";
